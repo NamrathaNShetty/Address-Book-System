@@ -2,7 +2,7 @@ package com.addressbook;
 import java.util.Scanner;
 
 public class AddressBookMain {
-    private void options() {
+    private void options(){
         boolean status = true;
         //Declaring and initializing with predefined standard input object
         Scanner scan = new Scanner(System.in);
@@ -11,18 +11,23 @@ public class AddressBookMain {
 
         /*To print options to perform
          *Choice to print add and display method
+         * Update or edit the details
          */
-        while (status) {
-            System.out.println("Hello Enter your option to perform actions: \n Press 1 to Add new person" +
-                    " \n Press 2 to Display details \n Press 9 to Quit");
+        while( status ) {
+            System.out.println("Hello Enter your option to perform actions: \n Press 1 to Add new person"+
+                    "\n Press 2 to Update/edit details \n Press 3 to Display details \n Press 9 to quit ");
             int choice = scan.nextInt();
             switch (choice) {
-                case 1:
+                case 1 :
                     addressBook.add();
                     break;
-                case 2:
-                    addressBook.display();
+                case 2 :
+                    System.out.println("Hello Please enter your firstname  to update your details");
+                    String firstName = scan.next();
+                    addressBook.edit(firstName);
                     break;
+                case 3 :
+                    addressBook.display();
                 default:
                     status = false;
             }
@@ -30,7 +35,7 @@ public class AddressBookMain {
     }
 
     /*Main method to call options*/
-    public static void main(String args[]) {
+    public static void main(String args[]){
         AddressBookMain main = new AddressBookMain();
         main.options();
 
