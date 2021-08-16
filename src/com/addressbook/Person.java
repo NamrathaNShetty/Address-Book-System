@@ -2,7 +2,7 @@ package com.addressbook;
 
 class Person {
 
-    //variables
+    //Variables
     private String firstName;
     private String lastName;
     private String address;
