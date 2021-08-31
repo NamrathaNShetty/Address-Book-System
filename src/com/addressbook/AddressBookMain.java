@@ -42,10 +42,10 @@ public class AddressBookMain {
                     addressBook.sortAlphabetically(firstname);
                     break;
                 case 6:
-                    System.out.println("Hi!! on what basis you would like to sort the details \nPress 1 to Seach " +
+                    System.out.println("Hi!! on what basis you would like to search the details \nPress 1 to Search " +
                             "on the basis of City\nPress 2 to Search on the basis of State\n");
-                    int optionToSort = scan.nextInt();
-                    if (optionToSort == 1) {
+                    int optionToSearch = scan.nextInt();
+                    if (optionToSearch == 1) {
                         System.out.println("Enter person firstname");
                         firstname = scan.next();
                         addressBook.searchPersonInState(firstname);
